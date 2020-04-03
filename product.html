@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Product Description</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+.checked {
+  color: orange;
+}
+</style>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">Sentiment Analysis</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="#">Products</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="Register.html">Register</a></li>
+        </ul>
+      </div>
+  </nav>
+</header>
+<div class="container">
+  <div class="row">
+  <!--Image Preview in grid1-->  
+  <div class="col-lg-4 col-md-4 col-sm-4" style="background-color: lavender; box-shadow:10px 10px  #A9A9A9; ">
+    <div class="product view">
+      <div class="card" style="width:100%; height:100%;">
+        <img class="card-img-top" src="image/m1.jpg" alt="Card image" style="width:80%; margin-top: 10%; margin-left: 10%;">
+        <div class="card-body">
+          <h4 class="card-title">Honor 9N</h4>
+          <p class="card-text">Price: ₹9,999 </p>
+          <a href="#" class="btn btn-primary btn-lg">buy</a>
+        </div>
+      </div>
+    </div>
+    <hr>
+    
+    <!--Comment Box Here-->
+    <form action="comment.php" method="POST">
+      <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea class="form-control" rows="3" id="comment" placeholder="Give Your Feedback Here"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" name="submit" style="float:right;">Submit</button>
+    </form>
+  </div>
+  <!--Public Comment in grid2-->
+  <div class="col-lg-6 col-md-6 col-sm-6"style="margin-left: 2%;">
+
+    <!--Star Rating-->
+    <div style="background-color: lavender; padding:2%;">
+      <h4>Overall Rating</h4>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+    </div>
+    <h2 class="text-center">Customer Feedback</h2>
+    <div class="media border p-3" style="margin-top: 5%; background-color: lavender;  padding:2%; box-shadow:10px 10px  #A9A9A9; ">
+    <div class="media-body">
+    <h4>John Doe <small><i>Posted on February 19, 2020</i></small></h4>
+    <p>Lorem ipsum...</p>
+  </div>
+</div>
+  </div> 
+</div>
+</div>
+</body>
+</html>
