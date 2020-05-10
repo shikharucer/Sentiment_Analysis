@@ -8,11 +8,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     $email = $_POST["email"];
     $phone = $_POST["mobile"];
     $pswd = $_POST["pswd"];
-
-    $sql = "INSERT INTO Customer (Customer_Name,Email,Password,Phone) VALUES('$name','$email','$pswd','$phone')";
+    $pass = sha1($pswd);
+    
+    $sql = "INSERT INTO Customer (Customer_Name,Email,Password,Phone) VALUES('$name','$email','$pass','$phone')";
 
     if($conn->query($sql) == TRUE){
-        echo "<script>alert('Registration Sucessfull')</script>";       
+        echo "<script>alert('Registration Sucessfull')</script>";  
+        header("Location: index.php");    
         } 
     else{
         echo "Error".$sql."<br>".$conn->error;

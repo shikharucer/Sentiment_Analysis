@@ -11,7 +11,9 @@ if(isset($_SESSION['user'])){
 
        $sql = "INSERT INTO Review(Review_Text,Review_Date,Review_Time,Email) VALUES('$comment',curdate(),curtime(),'$user')";
        if($conn->query($sql) == TRUE){
-       echo "<script>alert('You just commented')</script>";       
+       echo "<script>alert('You just commented')</script>";    
+       header("Location: product.php");
+
        } 
        else{
         echo "Error".$sql."<br>".$conn->error;
